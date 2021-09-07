@@ -9,12 +9,12 @@ namespace CoffeeShopConsoleApp
         {
             Console.WriteLine("Hello Coffee Shop!");
 
-            // a list of all the orders for coffe in the coffee shop
+            // a list of all the orders for coffee in the coffee shop
             List<Coffee> orderList = new List<Coffee>()
             {
-                new Coffee(),
-                new Coffee(),
-                new Coffee()
+                new BlackCoffee(),
+                new Cortado(),
+                new Latte()
 
             };
 
@@ -22,9 +22,10 @@ namespace CoffeeShopConsoleApp
             foreach (var coffee in orderList)
             {
                 Console.WriteLine("the Price of the coffee is : "+ coffee.price());
+                Console.WriteLine("the Strength of the coffee is : "+ coffee.Strength());
             }
 
-
+            Console.ReadKey();
         }
     }
 }
