@@ -10,14 +10,11 @@ namespace CoffeeShopConsoleApp
             Console.WriteLine("Hello Coffee Shop!");
 
             // a list of all the orders for coffee in the coffee shop
-            List<Coffee> orderList = new List<Coffee>()
-            {
-                new BlackCoffee(),
-                new Cortado(),
-                new Latte()
+            List<Coffee> orderList = new List<Coffee>();
 
-            };
-
+            orderList.Add(new BlackCoffee(5));
+            orderList.Add(new Cortado(3));
+            orderList.Add(new Latte(2));
 
             foreach (var coffee in orderList)
             {

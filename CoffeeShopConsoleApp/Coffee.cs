@@ -19,7 +19,19 @@ namespace CoffeeShopConsoleApp
 
         public Coffee(int discount)
         {
-            Discount = discount;
+            try
+            {
+                if (discount < 5)
+                {
+                    Discount = discount;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            
         }
 
         public virtual int price()
