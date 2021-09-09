@@ -19,19 +19,16 @@ namespace CoffeeShopConsoleApp
 
         public Coffee(int discount)
         {
-            try
+            if (discount > 5)
             {
-                if (discount < 5)
-                {
-                    Discount = discount;
-                }
+                throw new ArgumentException("Discount can't be higher than 5");
             }
-            catch (Exception e)
+            if (discount < 0)
             {
-                Console.WriteLine(e);
-                throw;
+                throw new ArgumentException("Discount must be between 1 and 5");
             }
-            
+
+            Discount = discount;
         }
 
         public virtual int price()

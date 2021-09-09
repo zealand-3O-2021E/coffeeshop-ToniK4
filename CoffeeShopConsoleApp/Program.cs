@@ -22,6 +22,12 @@ namespace CoffeeShopConsoleApp
                 Console.WriteLine("the Strength of the coffee is : "+ coffee.Strength());
             }
 
+            List<IMilk> miLkCoffees = new List<IMilk>()
+            {
+                new Cortado(3),
+                new Latte(2)
+            };
+
             Console.ReadKey();
         }
     }
