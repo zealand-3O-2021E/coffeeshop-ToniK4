@@ -75,8 +75,8 @@ namespace CoffeeShopConsoleApp.Tests
             string actualValue = coffee.Strength();
 
             //Assert
-            
-            
+            Assert.IsTrue(actualValue == "Strong");
+
         }
 
         [TestMethod()]
@@ -89,7 +89,7 @@ namespace CoffeeShopConsoleApp.Tests
             string actualValue = coffee.Strength();
 
             //Assert
-            Assert.AreEqual(25, actualValue);
+            Assert.IsTrue(actualValue == "Medium");
         }
 
         [TestMethod()]
@@ -102,7 +102,7 @@ namespace CoffeeShopConsoleApp.Tests
             string actualValue = coffee.Strength();
 
             //Assert
-            Assert.AreEqual(40, actualValue);
+            Assert.IsTrue(actualValue == "Weak");
         }
     }
 }
